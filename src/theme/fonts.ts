@@ -1,11 +1,13 @@
 const size = {
   caption: 10,
-  body12: 12,
-  body14: 14,
-  title16: 16,
-  title18: 18,
-  heading20: 20, 
-  heading24: 24, 
+  sm: 12,
+  reg: 14,
+  md: 18,
+  lg: 22, 
+  subtitle: 24,
+  title: 30, 
+  head: 36,
+  xl: 40, 
 };
 
 const weight = {
