@@ -4,14 +4,14 @@ const size = {
   reg: 14,
   md: 18,
   lg: 22, 
-  subtitle: 24,
+  subtitle: 26,
   title: 30, 
   head: 36,
   xl: 40, 
 };
 
 const weight = {
-  normal: 'normal',
+  norm: 'normal',
   thin: '400',
   semi: '600',
   full: '900',
