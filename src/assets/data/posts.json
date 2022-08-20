@@ -1,0 +1,126 @@
+[
+  {
+    "id": "1",
+    "createdAt": "31 August 2022",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+    "description": "Looking forward to our great week long getaway at Yellow Stone Park - Wyoming. It will be an amazing vacation!",
+    "user": {
+      "id": "u1",
+      "image": "https://cdn.pixabay.com/photo/2022/08/17/07/30/woman-7391779_1280.jpg",
+      "username": "EnterfaceLLC"
+    },
+    "nofComments": 15,
+    "nofLikes": 40,
+    "comments": [
+      {
+        "id": "1",
+        "comment": "It will be amazing quality time with just us two!",
+        "user": {
+          "id": "u1",
+          "username": "Dimplez1990"
+        }
+      },
+      {
+        "id": "2",
+        "comment": "Let me come! I dont want to stay home with Toxic08. #Wedge",
+        "user": {
+          "id": "u1",
+          "username": "Novi2012"
+        }
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "createdAt": "19 December 2021",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
+    "user": {
+      "id": "u1",
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg",
+      "username": "vadimnotjustdev"
+    },
+    "nofComments": 11,
+    "nofLikes": 34,
+    "comments": [
+      {
+        "id": "1",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "vadimnotjustdev"
+        }
+      },
+      {
+        "id": "2",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "vadimnotjustdev"
+        }
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "createdAt": "19 December 2021",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
+    "user": {
+      "id": "u1",
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg",
+      "username": "vadimnotjustdev"
+    },
+    "nofComments": 11,
+    "nofLikes": 34,
+    "comments": [
+      {
+        "id": "1",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "vadimnotjustdev"
+        }
+      },
+      {
+        "id": "2",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "vadimnotjustdev"
+        }
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "createdAt": "19 December 2021",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/4.jpg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus unde blanditiis. Eos fugiat dolorem ea fugit aut sapiente corrupti autem dolores deleniti architecto, omnis, amet unde dignissimos quam minima?",
+    "user": {
+      "id": "u1",
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg",
+      "username": "vadimnotjustdev"
+    },
+    "nofComments": 11,
+    "nofLikes": 34,
+    "comments": [
+      {
+        "id": "1",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "vadimnotjustdev"
+        }
+      },
+      {
+        "id": "2",
+        "comment": "Lorem ipsum dolor sit amet consectetur adipisicing elit. H",
+        "user": {
+          "id": "u1",
+          "username": "vadimnotjustdev"
+        }
+      }
+    ]
+  }
+]

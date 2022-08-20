@@ -1,17 +1,23 @@
-import {Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
-import colors from './src/theme/colors';
-import font from './src/theme/fonts';
+//***COMPONENT IMPORTS BELOW***//
+import HomeScreen from './src/screens/HomeScreen/HomeScreen';
 
-import Entypo from 'react-native-vector-icons/Entypo';
 
+//***APP CODE BELOW */
 const App = () => {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: colors.tertiary}}>
-      <Text style={{color: colors.highlight, fontSize: font.size.heading20, fontWeight: font.weight.bold }}>Enterface, LLC || Topeka KS</Text>
-      <Entypo name="game-controller" size={100} color={colors.primary}/>
+    <View style={styles.app}>
+      <HomeScreen />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  app: {
+    flex: 1,
+    backgroundColor: '#D3FCD5',
+  },
+});
 
 export default App;
