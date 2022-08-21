@@ -16,7 +16,7 @@ const App = () => {
 const styles = StyleSheet.create({
   app: {
     flex: 1,
-    backgroundColor: '#D3FCD5',
+    backgroundColor: '#A5243D',
   },
 });
 

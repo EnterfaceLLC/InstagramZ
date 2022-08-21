@@ -4,6 +4,7 @@ import {useState} from 'react';
 
 //***COMPONENT IMPORTS BELOW***//
 import Comment from '../Comment';
+import Carousel from '../Carousel';
 import {IPost} from '../../types/models';
 
 //***STYLE IMPORTS BELOW***//
@@ -36,14 +37,21 @@ const FeedPost = ({post}: IFeedPost) => {
     setLiked(value => !value)
   };
 
-  // let lastTap = 0;
-  // const handleTaps = () => {
-  //   const now = Date.now(); //Timestamp
-  //   if (now - lastTap < 300) {
-  //     toggleLiked();
-  //   }
-  //   lastTap = now;
-  // };
+  let content = null;
+  if (post.image) {
+    content = (
+      <DoublePress onDoublePress={toggleLiked}>
+        <Image
+          source={{
+            uri: post.image,
+          }}
+          style={styles.pic}
+        />
+      </DoublePress>
+    );
+  } else if (post.images) {
+    content = <Carousel images={post.images} onDoublePress={toggleLiked} />;
+  }
 
   return (
     <View style={styles.post}>
@@ -60,14 +68,7 @@ const FeedPost = ({post}: IFeedPost) => {
       </View>
 
       {/* CONTENT */}
-      <DoublePress onDoublePress={toggleLiked}>
-        <Image
-          source={{
-            uri: post.image,
-          }}
-          style={styles.pic}
-        />
-      </DoublePress>
+      {content}
 
       {/* FOOT */}
       <View style={styles.foot}>

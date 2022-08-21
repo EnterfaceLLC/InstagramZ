@@ -2,7 +2,11 @@
   {
     "id": "1",
     "createdAt": "31 August 2022",
-    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+    "images": [
+      "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/1.jpg",
+      "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/2.jpg",
+      "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/images/3.jpg"
+    ], 
     "description": "Looking forward to our great week long getaway at Yellow Stone Park - Wyoming. It will be an amazing vacation!",
     "user": {
       "id": "u1",
