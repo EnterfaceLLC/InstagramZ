@@ -8,14 +8,20 @@ import {
   ViewabilityConfig,
   ViewToken,
 } from 'react-native';
-import colors from '../../theme/colors';
+
+//***COMPONENT IMPORTS BELOW***//
 import DoublePress from '../DoublePress';
 
+//***THEME IMPORTS BELOW***//
+import colors from '../../theme/colors';
+
+//***INTERFACE CODE BELOW***//
 interface ICarousel {
   images: string[];
   onDoublePress?: () => void;
 }
 
+//***CAROUSEL CODE BELOW***//
 const Carousel = ({images, onDoublePress = () => {}}: ICarousel) => {
   const {width} = useWindowDimensions();
   const [activeImg, setActiveImg] = useState(0);

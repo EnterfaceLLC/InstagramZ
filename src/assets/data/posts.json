@@ -1,5 +1,36 @@
 [
   {
+    "id": "video1",
+    "createdAt": "31 August 2022",
+    "video":"https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4", 
+    "description": "Check out this amazing Vid!!!",
+    "user": {
+      "id": "u1",
+      "image": "https://cdn.pixabay.com/photo/2022/08/17/07/30/woman-7391779_1280.jpg",
+      "username": "EnterfaceLLC"
+    },
+    "nofComments": 15,
+    "nofLikes": 40,
+    "comments": [
+      {
+        "id": "1",
+        "comment": "Wow. This is pretty awesome!",
+        "user": {
+          "id": "u1",
+          "username": "Dimplez1990"
+        }
+      },
+      {
+        "id": "2",
+        "comment": "I ain't gonna hold you, that is epic. #Toxic08",
+        "user": {
+          "id": "u1",
+          "username": "Toxic08"
+        }
+      }
+    ]
+  },
+  {
     "id": "1",
     "createdAt": "31 August 2022",
     "images": [

@@ -1,9 +1,17 @@
+/* eslint-disable react/react-in-jsx-scope */
 import {StyleSheet, View, Text} from 'react-native';
-import colors from '../../theme/colors';
-import fonts from '../../theme/fonts';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+
+//***COMPONENT IMPORTS BELOW***//
 import {IComment} from '../../types/models';
 
+//***THEME IMPORTS BELOW***//
+import fonts from '../../theme/fonts';
+import colors from '../../theme/colors';
+
+//***ICON IMPORTS BELOW***//
+import AntDesign from 'react-native-vector-icons/AntDesign';
+
+//***INTERFACE CODE BELOW***//
 interface ICommentProps {
   comment: IComment;
 }

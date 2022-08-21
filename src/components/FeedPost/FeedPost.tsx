@@ -5,6 +5,8 @@ import {useState} from 'react';
 //***COMPONENT IMPORTS BELOW***//
 import Comment from '../Comment';
 import Carousel from '../Carousel';
+import VideoPlayer from '../VideoPlayer';
+import DoublePress from '../DoublePress';
 import {IPost} from '../../types/models';
 
 //***STYLE IMPORTS BELOW***//
@@ -18,14 +20,15 @@ import Fontisto from 'react-native-vector-icons/Fontisto';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import DoublePress from '../DoublePress';
 
+//***INTERFACE CODE BELOW***//
 interface IFeedPost {
   post: IPost;
+  isVisible: boolean;
 }
 
 //***FEEDPOST CODE BELOW***//
-const FeedPost = ({post}: IFeedPost) => {
+const FeedPost = ({post, isVisible}: IFeedPost) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [liked, setLiked] = useState(false);
 
@@ -50,7 +53,13 @@ const FeedPost = ({post}: IFeedPost) => {
       </DoublePress>
     );
   } else if (post.images) {
-    content = <Carousel images={post.images} onDoublePress={toggleLiked} />;
+    content = (<Carousel images={post.images} onDoublePress={toggleLiked} />);
+  } else if (post.video) {
+    content = (
+      <DoublePress onDoublePress={toggleLiked} >
+        <VideoPlayer uri={post.video} paused={!isVisible} />
+      </DoublePress>
+    );
   }
 
   return (
