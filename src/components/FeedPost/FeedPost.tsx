@@ -1,5 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {View, Text, Image} from 'react-native';
+import {useState} from 'react';
 
 //***COMPONENT IMPORTS BELOW***//
 import Comment from '../Comment';
@@ -16,6 +17,7 @@ import Fontisto from 'react-native-vector-icons/Fontisto';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import DoublePress from '../DoublePress';
 
 interface IFeedPost {
   post: IPost;
@@ -23,6 +25,26 @@ interface IFeedPost {
 
 //***FEEDPOST CODE BELOW***//
 const FeedPost = ({post}: IFeedPost) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [liked, setLiked] = useState(false);
+
+  const toggleDescription = () => {
+    setIsExpanded(value => !value);
+  };
+
+  const toggleLiked = () => {
+    setLiked(value => !value)
+  };
+
+  // let lastTap = 0;
+  // const handleTaps = () => {
+  //   const now = Date.now(); //Timestamp
+  //   if (now - lastTap < 300) {
+  //     toggleLiked();
+  //   }
+  //   lastTap = now;
+  // };
+
   return (
     <View style={styles.post}>
       {/* HEAD */}
@@ -38,21 +60,24 @@ const FeedPost = ({post}: IFeedPost) => {
       </View>
 
       {/* CONTENT */}
-      <Image
-        source={{
-          uri: post.image,
-        }}
-        style={styles.pic}
-      />
+      <DoublePress onDoublePress={toggleLiked}>
+        <Image
+          source={{
+            uri: post.image,
+          }}
+          style={styles.pic}
+        />
+      </DoublePress>
 
       {/* FOOT */}
       <View style={styles.foot}>
         <View style={styles.iconContainer}>
           <AntDesign
-            name={'hearto'}
+            name={liked ? 'heart' : 'hearto'}
             size={24}
             style={styles.icon}
-            color={colors.black}
+            color={liked ? colors.secondary : colors.black}
+            onPress={toggleLiked}
           />
           <Ionicons
             name="chatbubble-outline"
@@ -82,10 +107,11 @@ const FeedPost = ({post}: IFeedPost) => {
         </Text>
 
         {/*Post description*/}
-        <Text style={styles.text}>
+        <Text style={styles.text} numberOfLines={isExpanded ? 0 : 2}>
           <Text style={styles.bold}>{post.user.username}</Text>{' '}
           {post.description}
         </Text>
+        <Text onPress={toggleDescription}>{isExpanded ? 'less' : 'more'}</Text>
 
         {/*Comments*/}
         <Text>View all {post.nofComments} comments...</Text>
